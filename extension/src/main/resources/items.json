@@ -1,14 +1,23 @@
 {
     "format_version": 2,
     "items": {
+        "create:andesite_alloy": [
+        {
+            "type": "non_vanilla",
+            "model": "create:andesite_alloy",
+            "bedrock_identifier": "create:andesite_alloy",
+            "display_name": "Andesite Alloy",
+            "model_type": "flat"
+        }
+        ]
+            
         "create:zinc_ingot": [
         {
             "type": "non_vanilla",
             "model": "create:zinc_ingot",
             "bedrock_identifier": "create:zinc_ingot",
             "display_name": "Zinc Ingot",
-            "model_type": "flat",
-            "network_id" : 2128
+            "model_type": "flat"
         }
         ]
     }

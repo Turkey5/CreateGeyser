@@ -1,0 +1,8 @@
+{
+    "resource_pack_name": "Create: Geyser Resource Pack",
+    "texture_data": {
+        "create:zinc_ingot": {
+            "textures": "textures/items/zinc_ingot"
+        }
+    }
+}

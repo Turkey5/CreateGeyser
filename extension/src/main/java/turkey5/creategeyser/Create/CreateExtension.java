@@ -13,7 +13,10 @@ public final class CreateExtension implements Extension {
     }
     @Subscribe
     public void onPostInit(GeyserPostInitializeEvent event) {
+        logger().info("~~~~~~~~~~~~~~~~~~~~~");
         logger().info("Create: Geyser Loaded");
+        logger().info("~~~~~~~~~~~~~~~~~~~~~");
+        
     }
     @Subscribe
     public void onGeyserDefineCustomItems(GeyserDefineCustomItemsEvent event) {

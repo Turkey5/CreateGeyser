@@ -1,6 +1,24 @@
 {
     "resource_pack_name": "Create: Geyser Resource Pack",
     "texture_data": {
+        "create:andesite_alloy": {
+            "textures": "textures/items/andesite_alloy"
+        },
+        "create:andesite_door": {
+            "textures": "textures/items/andesite_door"
+        },
+        "create:antioxidant": {
+            "textures": "textures/items/antioxidant"
+        },
+        "create:attribute_filter": {
+            "textures": "textures/items/attribute_filter"
+        },
+        "create:bar_of_chocolate": {
+            "textures": "textures/items/bar_of_chocolate"
+        },
+        "create:belt_connector": {
+            "textures": "textures/items/belt_connector"
+        },
         "create:zinc_ingot": {
             "textures": "textures/items/zinc_ingot"
         }

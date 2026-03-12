@@ -1,14 +1,67 @@
 {
     "format_version": 2,
     "items": {
+        "create:andesite_alloy": [
+        {
+            "type": "non_vanilla",
+            "model": "create:andesite_alloy",
+            "bedrock_identifier": "create:andesite_alloy",
+            "display_name": "Andesite Alloy",
+            "model_type": "flat"
+        }
+        ]
+        "create:andesite_door": [
+        {
+            "type": "non_vanilla",
+            "model": "create:andesite_door",
+            "bedrock_identifier": "create:andesite_door",
+            "display_name": "Andesite Door",
+            "model_type": "flat"
+        }
+        ]
+        "create:antioxidant": [
+        {
+            "type": "non_vanilla",
+            "model": "create:antioxidant",
+            "bedrock_identifier": "create:antioxidant",
+            "display_name": "Antioxidant",
+            "model_type": "flat"
+        }
+        ]
+        "create:attribute_filter": [
+        {
+            "type": "non_vanilla",
+            "model": "create:attribute_filter",
+            "bedrock_identifier": "create:attribute_filter",
+            "display_name": "Attribute Filter",
+            "model_type": "flat"
+        }
+        ]
+        "create:bar_of_chocolate": [
+        {
+            "type": "non_vanilla",
+            "model": "create:bar_of_chocolate",
+            "bedrock_identifier": "create:bar_of_chocolate",
+            "display_name": "Bar of Chocolate",
+            "model_type": "flat"
+        }
+        ]
+        "create:belt_connector": [
+        {
+            "type": "non_vanilla",
+            "model": "create:belt_connector",
+            "bedrock_identifier": "create:belt_connector",
+            "display_name": "Belt Connector",
+            "model_type": "flat"
+        }
+        ]
         "create:zinc_ingot": [
         {
             "type": "non_vanilla",
             "model": "create:zinc_ingot",
             "bedrock_identifier": "create:zinc_ingot",
             "display_name": "Zinc Ingot",
-            "model_type": "flat",
-            "network_id" : 2128
+            "model_type": "flat"
         }
         ]
     }

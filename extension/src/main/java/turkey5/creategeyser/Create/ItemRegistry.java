@@ -1,6 +1,10 @@
 package turkey5.creategeyser.Create;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import org.geysermc.geyser.api.event.lifecycle.GeyserDefineCustomItemsEvent;
 import org.geysermc.geyser.api.item.custom.v2.CustomItemDefinition;
@@ -19,10 +23,16 @@ public class ItemRegistry {
         this.extension = extension;
     }
 
-public boolean detectHydraulic() {
-    String platform = extension.geyserApi().platformType().platformName().toLowerCase();
-    if (platform.contains("hydraulic")) {
-        return true;
+public boolean detectHydraulic(Path modsFolder) {
+    try (DirectoryStream<Path> stream = Files.newDirectoryStream(modsFolder)) {
+        for (Path file : stream) {
+            String name = file.getFileName().toString().toLowerCase();
+            if (name.contains("hydraulic") && name.endsWith(".jar")) {
+                return true;
+            }
+        }
+    } catch (IOException e) {
+        extension.logger().error("Could not scan mods folder",e);
     }
     return false;
 }

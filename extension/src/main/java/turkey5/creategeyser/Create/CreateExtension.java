@@ -1,5 +1,8 @@
 package turkey5.creategeyser.Create;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import org.geysermc.event.subscribe.Subscribe;
 import org.geysermc.geyser.api.event.lifecycle.GeyserDefineCustomItemsEvent;
 import org.geysermc.geyser.api.event.lifecycle.GeyserPostInitializeEvent;
@@ -21,8 +24,10 @@ public final class CreateExtension implements Extension {
     @Subscribe
     public void onGeyserDefineCustomItems(GeyserDefineCustomItemsEvent event) {
         logger().info("Defining items");
+        Path mods = Paths.get("mods");
         ItemRegistry itemRegistry = new ItemRegistry(this);
-        logger().info("Hydraulic Detected: " + String.valueOf(itemRegistry.detectHydraulic()));
+        boolean hydraulicPresent = itemRegistry.detectHydraulic(mods);
+        logger().info("Hydraulic Detected: " + String.valueOf(hydraulicPresent));
         itemRegistry.loadJson();
         itemRegistry.DefineCustomItems(event);
     }

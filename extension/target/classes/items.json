@@ -9,7 +9,7 @@
             "display_name": "Andesite Alloy",
             "model_type": "flat"
         }
-        ]
+        ],
         "create:andesite_door": [
         {
             "type": "non_vanilla",
@@ -18,7 +18,7 @@
             "display_name": "Andesite Door",
             "model_type": "flat"
         }
-        ]
+        ],
         "create:antioxidant": [
         {
             "type": "non_vanilla",
@@ -27,7 +27,7 @@
             "display_name": "Antioxidant",
             "model_type": "flat"
         }
-        ]
+        ],
         "create:attribute_filter": [
         {
             "type": "non_vanilla",
@@ -36,7 +36,7 @@
             "display_name": "Attribute Filter",
             "model_type": "flat"
         }
-        ]
+        ],
         "create:bar_of_chocolate": [
         {
             "type": "non_vanilla",
@@ -45,7 +45,7 @@
             "display_name": "Bar of Chocolate",
             "model_type": "flat"
         }
-        ]
+        ],
         "create:belt_connector": [
         {
             "type": "non_vanilla",
@@ -54,7 +54,7 @@
             "display_name": "Belt Connector",
             "model_type": "flat"
         }
-        ]
+        ],
         "create:zinc_ingot": [
         {
             "type": "non_vanilla",

@@ -1,5 +1,6 @@
 {
     "resource_pack_name": "Create: Geyser Resource Pack",
+    "texture_name": "atlas.items",
     "texture_data": {
         "create:andesite_alloy": {
             "textures": "textures/items/andesite_alloy"
@@ -11,7 +12,7 @@
             "textures": "textures/items/antioxidant"
         },
         "create:attribute_filter": {
-            "textures": "textures/items/attribute_filter"
+            "textures": "textures/items/andesite_alloy"
         },
         "create:bar_of_chocolate": {
             "textures": "textures/items/bar_of_chocolate"

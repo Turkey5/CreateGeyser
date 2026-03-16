@@ -19,6 +19,7 @@ public class ItemRegistry {
     private JsonNode root;
     private final ObjectMapper mapper = new ObjectMapper();
     private boolean jsonLoaded = false;
+    private boolean hydraulicPresent = false;
 
     public ItemRegistry(CreateExtension extension) {
         this.extension = extension;
@@ -29,12 +30,14 @@ public boolean detectHydraulic(Path modsFolder) {
         for (Path file : stream) {
             String name = file.getFileName().toString().toLowerCase();
             if (name.contains("hydraulic") && name.endsWith(".jar")) {
+                hydraulicPresent = true;
                 return true;
             }
         }
     } catch (IOException e) {
         extension.logger().error("Could not scan mods folder",e);
     }
+    hydraulicPresent = false;
     return false;
 }
 
@@ -65,19 +68,26 @@ public boolean detectHydraulic(Path modsFolder) {
         JsonNode items = root.get("items");
 
         items.fields().forEachRemaining(entry -> {
-            String javaId = entry.getKey();
-            JsonNode defs = entry.getValue();
-
-            for (JsonNode def : defs) {
-                String type = def.has("type") ? def.get("type").asText() : "vanilla";
-
-                if (type.equals("non_vanilla")) {
-                    extension.logger().info("Skipping non-vanilla registration for " + javaId + " (Hydraulic handles this)");
-                    continue;
-                }
-                if (type.equals("vanilla")) {
-                    registerDefinition(event, javaId, def);
-                }
+            try {
+                String javaId = entry.getKey();
+                JsonNode defs = entry.getValue();
+                for (JsonNode def : defs) {
+                    String type = def.has("type") ? def.get("type").asText() : "vanilla";
+                    if (type.equals("non_vanilla")) {
+                        if (!hydraulicPresent) {
+                            extension.logger().warning("non-vanilla item " + javaId + " will not work (Hydraulic not detected)");
+                            continue;
+                        }
+                        extension.logger().info("Skipping non-vanilla registration for " + javaId + " (Hydraulic handles this)");
+                        continue;
+                    }
+                    if (type.equals("vanilla")) {
+                        registerDefinition(event, javaId, def);
+                    }
+            }
+                
+            } catch (Exception e) {
+                extension.logger().error("Failed to register item: " + entry.getKey(), e);
             }
         });
     }

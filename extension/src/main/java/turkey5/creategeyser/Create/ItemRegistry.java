@@ -18,6 +18,7 @@ public class ItemRegistry {
     private final CreateExtension extension;
     private JsonNode root;
     private final ObjectMapper mapper = new ObjectMapper();
+    private boolean jsonLoaded = false;
 
     public ItemRegistry(CreateExtension extension) {
         this.extension = extension;
@@ -45,12 +46,17 @@ public boolean detectHydraulic(Path modsFolder) {
             }
             root = mapper.readTree(in);
             extension.logger().info("Loaded items.json");
+            jsonLoaded = true;
         } catch (Exception e) {
             extension.logger().error("Failed to load items.json", e);
         }
     }
 
-    public void DefineCustomItems(GeyserDefineCustomItemsEvent event) {
+    public void defineCustomItems(GeyserDefineCustomItemsEvent event) {
+        if (!jsonLoaded) {
+            extension.logger().error("Attempted to define custom items before loadJson() was successful");
+            return;
+        }
         if (root == null || !root.has("items")) {
             extension.logger().warning("No items to register");
             return;

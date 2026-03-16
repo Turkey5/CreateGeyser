@@ -20,6 +20,27 @@
         "create:belt_connector": {
             "textures": "textures/items/belt_connector"
         },
+        "create:blaze_cake": {
+            "textures": "textures/items/blaze_cake"
+        },
+        "create:brass_door": {
+            "textures": "textures/items/brass_door"
+        },
+        "create:brass_hand": {
+            "textures": "textures/items/brass_hand"
+        },
+        "create:brass_ingot": {
+            "textures": "textures/items/brass_ingot"
+        },
+        "create:brass_nugget": {
+            "textures": "textures/items/brass_nugget"
+        },
+        "create:brass_sheet": {
+            "textures": "textures/items/brass_sheet"
+        },
+        "create:builders_tea": {
+            "textures": "textures/items/builders_tea"
+        },
         "create:zinc_ingot": {
             "textures": "textures/items/zinc_ingot"
         }

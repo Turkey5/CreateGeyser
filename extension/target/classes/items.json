@@ -3,7 +3,7 @@
     "items": {
         "create:andesite_alloy": [
         {
-            "type": "non_vanilla",
+            "type": "vanilla",
             "model": "create:andesite_alloy",
             "bedrock_identifier": "create:andesite_alloy",
             "display_name": "Andesite Alloy",
@@ -12,7 +12,7 @@
         ],
         "create:andesite_door": [
         {
-            "type": "non_vanilla",
+            "type": "vanilla",
             "model": "create:andesite_door",
             "bedrock_identifier": "create:andesite_door",
             "display_name": "Andesite Door",
@@ -21,7 +21,7 @@
         ],
         "create:antioxidant": [
         {
-            "type": "non_vanilla",
+            "type": "vanilla",
             "model": "create:antioxidant",
             "bedrock_identifier": "create:antioxidant",
             "display_name": "Antioxidant",

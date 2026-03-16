@@ -29,6 +29,6 @@ public final class CreateExtension implements Extension {
         boolean hydraulicPresent = itemRegistry.detectHydraulic(mods);
         logger().info("Hydraulic Detected: " + String.valueOf(hydraulicPresent));
         itemRegistry.loadJson();
-        itemRegistry.DefineCustomItems(event);
+        itemRegistry.defineCustomItems(event);
     }
 }

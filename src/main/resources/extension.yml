@@ -2,5 +2,5 @@ name: CreateGeyser
 id: creategeyser
 version: 0.0.1
 main: turkey5.creategeyser.Create.CreateExtension
-api: 2.9.0
+api: 2.9.3-SNAPSHOT
 authors: ["Turkey"]
